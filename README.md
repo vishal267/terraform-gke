@@ -1,5 +1,7 @@
 # terraform-gke
 
+Create iam service-accounts  and attached to gcp project and attached the add-iam-policy-binding on the service account
+
 export TF_VAR_project_id=vishal-293614
 
 
