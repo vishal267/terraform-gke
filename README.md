@@ -8,13 +8,13 @@ terraform plan
 terraform apply --auto-approve 
 
 
-gcloud container clusters \
-    get-credentials \
-    $(terraform output cluster_name) \
-    --project \
-    $(terraform output project_id) \
-    --region \
-    $(terraform output region)
+Fetch kubeconfig
+gcloud container clusters get-credentials $(terraform output cluster_name) --project $(terraform output project_id) --region $(terraform output region)
+
+
+
+
+Create Cluster Role
 
 kubectl create clusterrolebinding \
     cluster-admin-binding \
